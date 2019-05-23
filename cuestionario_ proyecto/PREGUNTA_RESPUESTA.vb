@@ -436,9 +436,6 @@ Public Class PREGUNTA
         Timer1.Start()
 
         Call MODIFICAR_RESPUESTAS1()
-        'Call MODIFICAR_RESPUESTAS2()
-        'Call MODIFICAR_RESPUESTAS3()
-        'Call MODIFICAR_RESPUESTAS4()
         TextBox2.Clear()
         TextBox3.Clear()
         TextBox4.Clear()
@@ -459,7 +456,6 @@ Public Class PREGUNTA
     End Sub
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         ToolStripProgressBar1.Value = 0
-
         ToolStripStatusLabel1.Text = "Cargando"
         ToolStripProgressBar1.Visible = True
         Timer1.Start()
