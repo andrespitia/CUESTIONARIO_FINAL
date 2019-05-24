@@ -93,7 +93,7 @@ Public Class mantenimiento
                 Timer1.Stop()
 
 
-                'MsgBox("CONEXION ESTABLECIDA")
+
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)

@@ -52,7 +52,6 @@ Public Class NIVEL
                 Timer1.Stop()
 
 
-                'MsgBox("CONEXION ESTABLECIDA")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
