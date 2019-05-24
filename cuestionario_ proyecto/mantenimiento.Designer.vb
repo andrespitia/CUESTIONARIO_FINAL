@@ -35,6 +35,7 @@ Partial Class mantenimiento
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.PANEL_CUERPO.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -42,6 +43,7 @@ Partial Class mantenimiento
         'PANEL_CUERPO
         '
         Me.PANEL_CUERPO.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.PANEL_CUERPO.Controls.Add(Me.Button10)
         Me.PANEL_CUERPO.Controls.Add(Me.StatusStrip1)
         Me.PANEL_CUERPO.Controls.Add(Me.Button4)
         Me.PANEL_CUERPO.Controls.Add(Me.Label3)
@@ -165,6 +167,21 @@ Partial Class mantenimiento
         'Timer1
         '
         '
+        'Button10
+        '
+        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button10.Location = New System.Drawing.Point(12, 425)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(25, 24)
+        Me.Button10.TabIndex = 62
+        Me.Button10.Text = "<"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
         'mantenimiento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -193,4 +210,5 @@ Partial Class mantenimiento
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ToolStripProgressBar1 As ToolStripProgressBar
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents Button10 As Button
 End Class

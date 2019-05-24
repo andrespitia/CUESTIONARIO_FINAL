@@ -260,6 +260,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CUESTIONARIO.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="CUESTIONARIODataSet.xsc">
       <DependentUpon>CUESTIONARIODataSet.xsd</DependentUpon>
     </None>

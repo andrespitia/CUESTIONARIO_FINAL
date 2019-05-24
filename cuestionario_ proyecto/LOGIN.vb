@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
-Public Class Form1
+Public Class Login
     Public dataReader As SqlDataReader
+    Dim ayuda As String = System.IO.Path.Combine(Application.StartupPath, "CUESTIONARIO.chm")
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Try
@@ -19,10 +20,10 @@ Public Class Form1
 
             If dataReader.HasRows And ComboBox1.SelectedValue = 1 Then
                 CATEGORIA.Show()
-                Me.Close()
+                Me.Hide()
             ElseIf dataReader.HasRows And ComboBox1.SelectedValue = 2 Then
-                PREGUNTA.Show()
-                Me.Close()
+                CUESTIONARIO_ESTUI.Show()
+                Me.Hide()
             Else
                 lbl_msj.Visible = True
             End If
@@ -31,12 +32,13 @@ Public Class Form1
             ToolStripProgressBar1.Visible = True
             Timer1.Start()
         Catch ex As Exception
-            MessageBox.Show("ErrorBlinkStyle DE USUARIO O CONTRASEÑA")
+            'MessageBox.Show("ErrorBlinkStyle DE USUARIO O CONTRASEÑA")
             MessageBox.Show(ex.Message)
         End Try
     End Sub
 
     Private Sub ComboBox1_load(sender As Object, e As EventArgs) Handles MyBase.Load
+        HelpProvider1.HelpNamespace = ayuda
         Dim conex As New SqlConnection("Data Source=DESKTOP-N3PL2OJ;Initial Catalog=CUESTIONARIO_FINAL;Integrated Security=True")
         conex.Open()
         Dim query As String = "SELECT * FROM ROL"
@@ -58,7 +60,7 @@ Public Class Form1
         ToolStripProgressBar1.Visible = True
         Timer1.Start()
         USUARIO.Show()
-        Me.Close()
+        Me.Hide()
 
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -71,12 +73,20 @@ Public Class Form1
                 Timer1.Stop()
 
 
-                MsgBox("CONEXION ESTABLECIDA")
+                'MsgBox("CONEXION ESTABLECIDA")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
 
 
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        Help.ShowHelp(Me, HelpProvider1.HelpNamespace, HelpNavigator.TableOfContents)
     End Sub
 End Class

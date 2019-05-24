@@ -25,6 +25,9 @@ Partial Class CUESTIONARIO_ESTUI
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CUESTIONARIO_ESTUI))
         Me.PANEL_CUERPO = New System.Windows.Forms.Panel()
+        Me.PREGUNTALabel2 = New System.Windows.Forms.Label()
+        Me.PREGUNTASBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CUESTIONARIO_FINALDataSet3 = New cuestionario__proyecto.CUESTIONARIO_FINALDataSet3()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -41,27 +44,27 @@ Partial Class CUESTIONARIO_ESTUI
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.CUESTIONARIO_FINALDataSet3 = New cuestionario__proyecto.CUESTIONARIO_FINALDataSet3()
-        Me.PREGUNTASBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PREGUNTASTableAdapter = New cuestionario__proyecto.CUESTIONARIO_FINALDataSet3TableAdapters.PREGUNTASTableAdapter()
         Me.TableAdapterManager = New cuestionario__proyecto.CUESTIONARIO_FINALDataSet3TableAdapters.TableAdapterManager()
         Me.PREGUNTASBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.PREGUNTASBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.PREGUNTALabel2 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.PANEL_CUERPO.SuspendLayout()
-        CType(Me.CUESTIONARIO_FINALDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PREGUNTASBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CUESTIONARIO_FINALDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PREGUNTASBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PREGUNTASBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
@@ -69,6 +72,8 @@ Partial Class CUESTIONARIO_ESTUI
         'PANEL_CUERPO
         '
         Me.PANEL_CUERPO.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.PANEL_CUERPO.Controls.Add(Me.Button3)
+        Me.PANEL_CUERPO.Controls.Add(Me.Label10)
         Me.PANEL_CUERPO.Controls.Add(Me.PREGUNTALabel2)
         Me.PANEL_CUERPO.Controls.Add(Me.Label9)
         Me.PANEL_CUERPO.Controls.Add(Me.Button1)
@@ -89,16 +94,37 @@ Partial Class CUESTIONARIO_ESTUI
         Me.PANEL_CUERPO.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PANEL_CUERPO.Location = New System.Drawing.Point(0, 0)
         Me.PANEL_CUERPO.Name = "PANEL_CUERPO"
-        Me.PANEL_CUERPO.Size = New System.Drawing.Size(677, 623)
+        Me.PANEL_CUERPO.Size = New System.Drawing.Size(707, 623)
         Me.PANEL_CUERPO.TabIndex = 5
+        '
+        'PREGUNTALabel2
+        '
+        Me.PREGUNTALabel2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PREGUNTASBindingSource, "PREGUNTA", True))
+        Me.PREGUNTALabel2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PREGUNTALabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.PREGUNTALabel2.Location = New System.Drawing.Point(32, 228)
+        Me.PREGUNTALabel2.Name = "PREGUNTALabel2"
+        Me.PREGUNTALabel2.Size = New System.Drawing.Size(531, 56)
+        Me.PREGUNTALabel2.TabIndex = 52
+        Me.PREGUNTALabel2.Text = "Label10"
+        '
+        'PREGUNTASBindingSource
+        '
+        Me.PREGUNTASBindingSource.DataMember = "PREGUNTAS"
+        Me.PREGUNTASBindingSource.DataSource = Me.CUESTIONARIO_FINALDataSet3
+        '
+        'CUESTIONARIO_FINALDataSet3
+        '
+        Me.CUESTIONARIO_FINALDataSet3.DataSetName = "CUESTIONARIO_FINALDataSet3"
+        Me.CUESTIONARIO_FINALDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label9
         '
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(607, 137)
+        Me.Label9.Location = New System.Drawing.Point(649, 186)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(46, 20)
+        Me.Label9.Size = New System.Drawing.Size(37, 20)
         Me.Label9.TabIndex = 51
         Me.Label9.Text = "0"
         '
@@ -110,17 +136,17 @@ Partial Class CUESTIONARIO_ESTUI
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(564, 55)
+        Me.Button1.Location = New System.Drawing.Point(564, 88)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(89, 26)
+        Me.Button1.Size = New System.Drawing.Size(101, 26)
         Me.Button1.TabIndex = 50
-        Me.Button1.Text = "SIGUIENTE"
+        Me.Button1.Text = "SELECCIONAR"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(301, 59)
+        Me.ComboBox1.Location = New System.Drawing.Point(301, 88)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(233, 21)
         Me.ComboBox1.TabIndex = 49
@@ -129,7 +155,7 @@ Partial Class CUESTIONARIO_ESTUI
         '
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(12, 57)
+        Me.Label8.Location = New System.Drawing.Point(12, 86)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(308, 20)
         Me.Label8.TabIndex = 48
@@ -143,7 +169,7 @@ Partial Class CUESTIONARIO_ESTUI
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Button8.Location = New System.Drawing.Point(445, 569)
+        Me.Button8.Location = New System.Drawing.Point(539, 557)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(89, 26)
         Me.Button8.TabIndex = 47
@@ -157,7 +183,6 @@ Partial Class CUESTIONARIO_ESTUI
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton4.TabIndex = 27
-        Me.RadioButton4.TabStop = True
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
         'RadioButton3
@@ -167,7 +192,6 @@ Partial Class CUESTIONARIO_ESTUI
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton3.TabIndex = 26
-        Me.RadioButton3.TabStop = True
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'RadioButton2
@@ -177,12 +201,12 @@ Partial Class CUESTIONARIO_ESTUI
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton2.TabIndex = 25
-        Me.RadioButton2.TabStop = True
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
         Me.RadioButton1.Location = New System.Drawing.Point(445, 322)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(14, 13)
@@ -194,9 +218,9 @@ Partial Class CUESTIONARIO_ESTUI
         '
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(517, 137)
+        Me.Label7.Location = New System.Drawing.Point(488, 186)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(46, 20)
+        Me.Label7.Size = New System.Drawing.Size(32, 20)
         Me.Label7.TabIndex = 20
         Me.Label7.Text = "0"
         '
@@ -204,7 +228,7 @@ Partial Class CUESTIONARIO_ESTUI
         '
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(441, 137)
+        Me.Label6.Location = New System.Drawing.Point(411, 186)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(74, 20)
         Me.Label6.TabIndex = 19
@@ -261,16 +285,6 @@ Partial Class CUESTIONARIO_ESTUI
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "CUESTIONARIO"
         '
-        'CUESTIONARIO_FINALDataSet3
-        '
-        Me.CUESTIONARIO_FINALDataSet3.DataSetName = "CUESTIONARIO_FINALDataSet3"
-        Me.CUESTIONARIO_FINALDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PREGUNTASBindingSource
-        '
-        Me.PREGUNTASBindingSource.DataMember = "PREGUNTAS"
-        Me.PREGUNTASBindingSource.DataSource = Me.CUESTIONARIO_FINALDataSet3
-        '
         'PREGUNTASTableAdapter
         '
         Me.PREGUNTASTableAdapter.ClearBeforeFill = True
@@ -303,9 +317,34 @@ Partial Class CUESTIONARIO_ESTUI
         Me.PREGUNTASBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.PREGUNTASBindingNavigator.Name = "PREGUNTASBindingNavigator"
         Me.PREGUNTASBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.PREGUNTASBindingNavigator.Size = New System.Drawing.Size(677, 25)
+        Me.PREGUNTASBindingNavigator.Size = New System.Drawing.Size(707, 25)
         Me.PREGUNTASBindingNavigator.TabIndex = 6
         Me.PREGUNTASBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -339,17 +378,10 @@ Partial Class CUESTIONARIO_ESTUI
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 15)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -357,7 +389,7 @@ Partial Class CUESTIONARIO_ESTUI
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
         '
         'BindingNavigatorMoveLastItem
@@ -366,64 +398,60 @@ Partial Class CUESTIONARIO_ESTUI
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'PREGUNTASBindingNavigatorSaveItem
         '
         Me.PREGUNTASBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.PREGUNTASBindingNavigatorSaveItem.Image = CType(resources.GetObject("PREGUNTASBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.PREGUNTASBindingNavigatorSaveItem.Name = "PREGUNTASBindingNavigatorSaveItem"
-        Me.PREGUNTASBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.PREGUNTASBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.PREGUNTASBindingNavigatorSaveItem.Text = "Guardar datos"
         '
-        'PREGUNTALabel2
+        'Label10
         '
-        Me.PREGUNTALabel2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PREGUNTASBindingSource, "PREGUNTA", True))
-        Me.PREGUNTALabel2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PREGUNTALabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.PREGUNTALabel2.Location = New System.Drawing.Point(32, 228)
-        Me.PREGUNTALabel2.Name = "PREGUNTALabel2"
-        Me.PREGUNTALabel2.Size = New System.Drawing.Size(531, 56)
-        Me.PREGUNTALabel2.TabIndex = 52
-        Me.PREGUNTALabel2.Text = "Label10"
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(535, 186)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(108, 20)
+        Me.Label10.TabIndex = 53
+        Me.Label10.Text = "INCORRECTO"
+        '
+        'Button3
+        '
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button3.Location = New System.Drawing.Point(657, 28)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(38, 34)
+        Me.Button3.TabIndex = 54
+        Me.Button3.Text = "?"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'CUESTIONARIO_ESTUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(677, 623)
+        Me.ClientSize = New System.Drawing.Size(707, 623)
         Me.Controls.Add(Me.PREGUNTASBindingNavigator)
         Me.Controls.Add(Me.PANEL_CUERPO)
         Me.Name = "CUESTIONARIO_ESTUI"
         Me.Text = "CUESTIONARIO_ESTUI"
         Me.PANEL_CUERPO.ResumeLayout(False)
         Me.PANEL_CUERPO.PerformLayout()
-        CType(Me.CUESTIONARIO_FINALDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PREGUNTASBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CUESTIONARIO_FINALDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PREGUNTASBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PREGUNTASBindingNavigator.ResumeLayout(False)
         Me.PREGUNTASBindingNavigator.PerformLayout()
@@ -467,4 +495,7 @@ Partial Class CUESTIONARIO_ESTUI
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents PREGUNTASBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents PREGUNTALabel2 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

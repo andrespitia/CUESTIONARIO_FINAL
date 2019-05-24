@@ -10,8 +10,9 @@
         End While
 
         Me.Visible = False
-        Form1.Show()
-        'Me.Close()
+        Login.Show()
+        'Me.Hide()
+
     End Sub
 
 

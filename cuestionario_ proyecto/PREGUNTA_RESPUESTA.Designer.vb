@@ -24,6 +24,11 @@ Partial Class PREGUNTA
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -65,8 +70,8 @@ Partial Class PREGUNTA
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel2.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -74,6 +79,10 @@ Partial Class PREGUNTA
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Button13)
+        Me.Panel2.Controls.Add(Me.Label17)
+        Me.Panel2.Controls.Add(Me.Button12)
+        Me.Panel2.Controls.Add(Me.Button10)
         Me.Panel2.Controls.Add(Me.Label16)
         Me.Panel2.Controls.Add(Me.Label15)
         Me.Panel2.Controls.Add(Me.Label14)
@@ -119,6 +128,71 @@ Partial Class PREGUNTA
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(744, 679)
         Me.Panel2.TabIndex = 2
+        '
+        'Label17
+        '
+        Me.Label17.Font = New System.Drawing.Font("Century Gothic", 11.0!)
+        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Label17.Location = New System.Drawing.Point(475, 460)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(171, 74)
+        Me.Label17.TabIndex = 62
+        Me.Label17.Text = "Este botón dirige al mantenimiento del sistema. "
+        Me.Label17.Visible = False
+        '
+        'Button12
+        '
+        Me.Button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.Button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button12.Location = New System.Drawing.Point(47, 617)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(26, 24)
+        Me.Button12.TabIndex = 61
+        Me.Button12.Text = ">"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button10.Location = New System.Drawing.Point(16, 617)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(25, 24)
+        Me.Button10.TabIndex = 60
+        Me.Button10.Text = "<"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.Font = New System.Drawing.Font("Century Gothic", 11.0!)
+        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Label16.Location = New System.Drawing.Point(475, 460)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(171, 117)
+        Me.Label16.TabIndex = 59
+        Me.Label16.Text = "Con este botón podrá eliminar una las repuestas luego de seleccionar la pregunta " &
+    "en el menú desplegable"
+        Me.Label16.Visible = False
+        '
+        'Label15
+        '
+        Me.Label15.Font = New System.Drawing.Font("Century Gothic", 11.0!)
+        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Label15.Location = New System.Drawing.Point(475, 460)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(171, 128)
+        Me.Label15.TabIndex = 58
+        Me.Label15.Text = "Antes de presionar este botón presione el botón 'ver' para habilitar los campos d" &
+    "e las respuestas"
+        Me.Label15.Visible = False
         '
         'Label14
         '
@@ -555,29 +629,20 @@ Partial Class PREGUNTA
         'Timer1
         '
         '
-        'Label15
+        'Button13
         '
-        Me.Label15.Font = New System.Drawing.Font("Century Gothic", 11.0!)
-        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(475, 460)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(171, 128)
-        Me.Label15.TabIndex = 58
-        Me.Label15.Text = "Antes de presionar este botón presione el botón 'ver' para habilitar los campos d" &
-    "e las respuestas"
-        Me.Label15.Visible = False
-        '
-        'Label16
-        '
-        Me.Label16.Font = New System.Drawing.Font("Century Gothic", 11.0!)
-        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(475, 460)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(171, 117)
-        Me.Label16.TabIndex = 59
-        Me.Label16.Text = "Con este botón podrá eliminar una las repuestas luego de seleccionar la pregunta " &
-    "en el menú desplegable"
-        Me.Label16.Visible = False
+        Me.Button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.Button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button13.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button13.Location = New System.Drawing.Point(703, 3)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(38, 34)
+        Me.Button13.TabIndex = 63
+        Me.Button13.Text = "?"
+        Me.Button13.UseVisualStyleBackColor = True
         '
         'PREGUNTA
         '
@@ -639,4 +704,9 @@ Partial Class PREGUNTA
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Button10 As Button
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Button13 As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

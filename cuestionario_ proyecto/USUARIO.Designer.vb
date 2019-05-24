@@ -24,6 +24,9 @@ Partial Class USUARIO
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.PANEL_CUERPO = New System.Windows.Forms.Panel()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -49,10 +52,9 @@ Partial Class USUARIO
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.PANEL_CUERPO.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -60,6 +62,7 @@ Partial Class USUARIO
         'PANEL_CUERPO
         '
         Me.PANEL_CUERPO.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.PANEL_CUERPO.Controls.Add(Me.Button7)
         Me.PANEL_CUERPO.Controls.Add(Me.StatusStrip1)
         Me.PANEL_CUERPO.Controls.Add(Me.TextBox7)
         Me.PANEL_CUERPO.Controls.Add(Me.TextBox6)
@@ -91,6 +94,25 @@ Partial Class USUARIO
         Me.PANEL_CUERPO.Name = "PANEL_CUERPO"
         Me.PANEL_CUERPO.Size = New System.Drawing.Size(512, 619)
         Me.PANEL_CUERPO.TabIndex = 2
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1, Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 597)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(512, 22)
+        Me.StatusStrip1.TabIndex = 36
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripProgressBar1
+        '
+        Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
+        Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(0, 17)
         '
         'TextBox7
         '
@@ -361,24 +383,23 @@ Partial Class USUARIO
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "USUARIO"
         '
-        'StatusStrip1
+        'Timer1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1, Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 597)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(512, 22)
-        Me.StatusStrip1.TabIndex = 36
-        Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'ToolStripProgressBar1
+        'Button7
         '
-        Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
-        Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(0, 17)
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button7.Location = New System.Drawing.Point(471, 3)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(38, 34)
+        Me.Button7.TabIndex = 28
+        Me.Button7.Text = "?"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'USUARIO
         '
@@ -426,4 +447,6 @@ Partial Class USUARIO
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ToolStripProgressBar1 As ToolStripProgressBar
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents Button7 As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

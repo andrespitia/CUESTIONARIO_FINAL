@@ -5,6 +5,8 @@ Imports System.Data.SqlClient
 Public Class PREGUNTA
     Dim datos As New DataSet
     Dim query As String
+    Dim ayuda As String = System.IO.Path.Combine(Application.StartupPath, "CUESTIONARIO.chm")
+
 
     Sub INSERTAR_PREGUNTA()
         ToolStripStatusLabel1.Text = "Cargando"
@@ -472,6 +474,8 @@ Public Class PREGUNTA
 
 
     Private Sub ComboBox1_load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        HelpProvider1.HelpNamespace = ayuda
         Dim conex As New SqlConnection("Data Source=DESKTOP-N3PL2OJ;Initial Catalog=CUESTIONARIO_FINAL;Integrated Security=True")
         conex.Open()
         Dim query As String = "SELECT * FROM CATEGORIA"
@@ -612,6 +616,27 @@ Public Class PREGUNTA
     End Sub
 
     Private Sub Button6_MouseLeave(sender As Object, e As EventArgs) Handles Button6.MouseLeave
+        Label17.Visible = False
+    End Sub
+
+    Private Sub Button12_MouseEnter(sender As Object, e As EventArgs) Handles Button12.MouseEnter
+        Label17.Visible = True
+    End Sub
+
+    Private Sub Button12_MouseLeave(sender As Object, e As EventArgs) Handles Button12.MouseLeave
         Label16.Visible = False
+    End Sub
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        NIVEL.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        mantenimiento.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        Help.ShowHelp(Me, HelpProvider1.HelpNamespace, HelpNavigator.TableOfContents)
     End Sub
 End Class

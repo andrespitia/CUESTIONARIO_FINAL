@@ -3,6 +3,7 @@ Imports System.Data.SqlClient
 
 Public Class USUARIO
     Dim datos As DataSet
+    Dim ayuda As String = System.IO.Path.Combine(Application.StartupPath, "CUESTIONARIO.chm")
     Sub INSERTAR_USUARIO()
         Try
             Dim conex As New SqlConnection("Data Source=DESKTOP-N3PL2OJ;Initial Catalog=CUESTIONARIO_FINAL;Integrated Security=True")
@@ -34,7 +35,7 @@ Public Class USUARIO
 
             Call INSERTAR_USUARIO()
             MsgBox("EL USUARIO SE HA REGISTRADO")
-            Form1.Show()
+            Login.Show()
             Me.Hide()
 
             lbl_contra.Visible = True
@@ -48,11 +49,12 @@ Public Class USUARIO
         ToolStripStatusLabel1.Text = "Cargando"
         ToolStripProgressBar1.Visible = True
         Timer1.Start()
-        Form1.Show()
+        Login.Show()
         Me.Close()
     End Sub
 
     Private Sub ComboBox1_load(sender As Object, e As EventArgs) Handles MyBase.Load
+        HelpProvider1.HelpNamespace = ayuda
         Dim conex As New SqlConnection("Data Source=DESKTOP-N3PL2OJ;Initial Catalog=CUESTIONARIO_FINAL;Integrated Security=True")
         conex.Open()
         Dim query As String = "SELECT * FROM ROL"
@@ -207,12 +209,16 @@ Public Class USUARIO
                 Timer1.Stop()
 
 
-                MsgBox("CONEXION ESTABLECIDA")
+                'MsgBox("CONEXION ESTABLECIDA")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
 
 
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Help.ShowHelp(Me, HelpProvider1.HelpNamespace, HelpNavigator.TableOfContents)
     End Sub
 End Class

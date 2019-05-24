@@ -1,9 +1,10 @@
 ﻿Imports System.Data.SqlClient
 Public Class CUESTIONARIO_ESTUI
-
+    Dim ayuda As String = System.IO.Path.Combine(Application.StartupPath, "CUESTIONARIO.chm")
     Dim datos As New DataSet
 
     Private Sub ComboBox1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        HelpProvider1.HelpNamespace = ayuda
         Dim conex As New SqlConnection("Data Source=DESKTOP-N3PL2OJ;Initial Catalog=CUESTIONARIO_FINAL;Integrated Security=True")
         conex.Open()
         Dim query As String = "SELECT * FROM CUESTIONARIO"
@@ -208,5 +209,9 @@ Public Class CUESTIONARIO_ESTUI
         Me.PREGUNTASBindingSource.MoveNext()
         Call ver_res()
         Call Respuestas_corr_incorr()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Help.ShowHelp(Me, HelpProvider1.HelpNamespace, HelpNavigator.TableOfContents)
     End Sub
 End Class
